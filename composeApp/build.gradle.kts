@@ -10,6 +10,7 @@ plugins {
 }
 
 kotlin {
+    jvmToolchain(11)
     androidTarget {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
@@ -101,7 +102,7 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "edu.learning.newsreader.MainKt"
+        mainClass = "edu.learning.newsreader.Main"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
